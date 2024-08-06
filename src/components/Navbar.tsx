@@ -13,7 +13,7 @@ const links = [
   { name: 'blog', href: '/blog' },
 ];
 
-const Navbar: React.FC<NavBarProps> = ({ click, handleNavClose }) => {
+const Navbar = ({ click, handleNavClose }: NavBarProps) => {
   const handleNavLinkClick = () => {
     handleNavClose();
     window.scrollTo(0, 0);
