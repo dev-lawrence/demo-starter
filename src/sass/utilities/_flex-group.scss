@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: $button-gap;
+
+  @include small {
+    row-gap: $button-gap;
+  }
+
+  &[datatype='card'] {
+    column-gap: $size-4;
+  }
+}
+
+.flex-group.center {
+  justify-content: center;
+}

@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+// Generate utility classes for text and background colors
+@each $group, $colors in $light-theme {
+  @each $key, $color in $colors {
+    .text-#{$group}-#{$key} {
+      color: var(--#{$group}-#{$key});
+    }
+    .bg-#{$group}-#{$key} {
+      background-color: var(--#{$group}-#{$key});
+    }
+  }
+}
+
+@each $group, $colors in $dark-theme {
+  @each $key, $color in $colors {
+    .text-#{$group}-#{$key} {
+      color: var(--#{$group}-#{$key});
+    }
+    .bg-#{$group}-#{$key} {
+      background-color: var(--#{$group}-#{$key});
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@use '../abstracts' as *;
+
+.site-footer {
+  background-color: $site-footer-background;
+  padding: $size-12 0 $size-8;
+  position: relative;
+  margin-top: $size-12;
+
+  a,
+  p {
+    color: $site-footer-color;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    margin-bottom: $size-4;
+  }
+
+  .menu--links,
+  .social-links,
+  .copyright {
+    a {
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $site-footer-primary-color;
+      }
+    }
+  }
+
+  .menu--links {
+    @include medium {
+      margin-left: $size-6;
+    }
+    li {
+      margin-bottom: $size-2;
+    }
+  }
+
+  .social-links {
+    a {
+      margin-right: 1rem;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: $size-10 0 0;
+
+    .author {
+      padding-left: $size-2;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: $site-footer-primary-color;
+      }
+    }
+  }
+
+  // to top arrow
+  @keyframes goTop {
+    from {
+      transform: translateY(-30px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  .page-up {
+    span {
+      position: fixed;
+      bottom: $size-4;
+      right: $size-4;
+      z-index: 100;
+      background-color: $site-footer-pageUp-bg;
+      color: $site-footer-color;
+      opacity: 0;
+      visibility: hidden;
+      height: 40px;
+      width: 40px;
+      line-height: 0;
+      text-align: center;
+      @include flex(center, center);
+      border-radius: $radius-300;
+      cursor: pointer;
+      transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
+
+      .up-icon {
+        font-size: $fs-600;
+      }
+
+      &.showArrow {
+        animation: goTop 0.5s linear;
+        opacity: 0.5;
+        visibility: visible;
+      }
+
+      &:hover {
+        background-color: $site-footer-primary-color;
+        opacity: 1;
+      }
+    }
+  }
+
+  //MEDIA QUERY
+  @include medium {
+    .grid {
+      @include grid(repeat(2, 1fr), 2rem);
+    }
+
+    .other-links {
+      margin-left: 0;
+    }
+
+    .quick-menu {
+      justify-self: flex-end;
+    }
+
+    .social-links {
+      justify-self: flex-end;
+    }
+  }
+
+  @include large {
+    .grid {
+      @include grid(repeat(4, 1fr), 2rem);
+    }
+
+    .other-links {
+      justify-self: flex-end;
+    }
+  }
+}

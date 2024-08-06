@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: $size-7;
+}
+
+.grid-flow {
+  --grid-columns: repeat(2, 1fr);
+  --grid-gap: 2rem;
+  --grid-columns-medium: repeat(6, 1fr);
+  --grid-gap-medium: 1rem;
+
+  @include grid(var(--grid-columns), var(--grid-gap));
+
+  @include medium {
+    @include grid(var(--grid-columns-medium), var(--grid-gap-medium));
+  }
+}
+
+.grid-2 {
+  --grid-columns: repeat(2, 1fr);
+  --grid-gap: 2rem;
+
+  @include medium {
+    @include grid(var(--grid-columns), var(--grid-gap));
+  }
+}
+
+.grid-3 {
+  --grid-columns: repeat(2, 1fr);
+  --grid-gap: 2rem;
+  --grid-columns-large: repeat(3, 1fr);
+  --grid-gap-large: 2rem;
+
+  @include medium {
+    @include grid(var(--grid-columns), var(--grid-gap));
+  }
+
+  @include large {
+    @include grid(var(--grid-columns-large), var(--grid-gap-large));
+  }
+}

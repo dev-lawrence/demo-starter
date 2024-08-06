@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+span,
+select,
+caption,
+label {
+  display: inline-block;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: $secondary-font;
+  width: 100%;
+}

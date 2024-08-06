@@ -1,0 +1,89 @@
+@use '../abstracts' as *;
+
+.section {
+  padding-top: $size-10;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+@each $size-name, $size-value in $sizes {
+  // margin
+  .m-#{$size-name} {
+    margin: $size-value;
+  }
+
+  .mt-#{$size-name} {
+    margin-block-start: $size-value;
+  }
+
+  .mb-#{$size-name} {
+    margin-block-end: $size-value;
+  }
+
+  .ml-#{$size-name} {
+    margin-inline-start: $size-value;
+  }
+
+  .mr-#{$size-name} {
+    margin-inline-end: $size-value;
+  }
+
+  .my-#{$size-name} {
+    margin-block: $size-value;
+  }
+
+  .mx-#{$size-name} {
+    margin-inline: $size-value;
+  }
+
+  // padding
+  .p-#{$size-name} {
+    padding: $size-value;
+  }
+
+  .pt-#{$size-name} {
+    padding-block-start: $size-value;
+  }
+
+  .pb-#{$size-name} {
+    padding-block-end: $size-value;
+  }
+
+  .pl-#{$size-name} {
+    padding-inline-start: $size-value;
+  }
+
+  .pr-#{$size-name} {
+    padding-inline-end: $size-value;
+  }
+
+  .py-#{$size-name} {
+    padding-block: $size-value;
+  }
+
+  .px-#{$size-name} {
+    padding-inline: $size-value;
+  }
+
+  // top
+  .top-#{$size-name} {
+    top: $size-value;
+  }
+
+  // right
+  .right-#{$size-name} {
+    right: $size-value;
+  }
+
+  // bottom
+  .bottom-#{$size-name} {
+    bottom: $size-value;
+  }
+
+  // left
+  .left-#{$size-name} {
+    left: $size-value;
+  }
+}

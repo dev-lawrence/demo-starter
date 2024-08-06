@@ -1,0 +1,122 @@
+@use '../abstracts' as *;
+
+.nav-icons {
+  @include flex(center, flex-start);
+  z-index: 200;
+  cursor: pointer;
+  color: $nav-icon-color;
+
+  .nav-icon {
+    font-size: $nav-icon-font-size;
+  }
+
+  @include large {
+    display: none;
+  }
+}
+
+.nav {
+  @include flex(center, flex-end);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  z-index: 100;
+  transform: translateX(190.25rem);
+  transition: transform 0.5s ease-in-out;
+
+  @include large {
+    position: relative;
+    transform: translateX(0);
+    height: 100%;
+  }
+
+  // show menu
+  &.showMenu {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  background-color: $nav-menu-background;
+  border-left: 1px solid $clr-grey-darker;
+  height: 100vh;
+  width: $nav-menu-width;
+  padding: $nav-menu-padding;
+
+  @include large {
+    height: 100%;
+    @include flex(center, center);
+    padding: 0;
+    margin-inline: auto;
+    background-color: transparent;
+    border-left-color: transparent;
+  }
+
+  @include small {
+    width: $nav-menu-width-small-screen;
+  }
+
+  li {
+    text-transform: $nav-menu-text-transform;
+    margin-bottom: $nav-menu-margin-bottom;
+
+    @include large {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        padding-right: $nav-menu-gap;
+      }
+    }
+  }
+
+  a {
+    color: $nav-menu-color;
+    font-size: $nav-menu-font-size;
+    font-weight: $nav-menu-font-weight;
+    transition: color 0.2s ease-in-out;
+
+    @include large {
+      font-size: $nav-menu-font-size-large-screen;
+    }
+
+    &:hover {
+      color: $nav-menu-color-hover;
+    }
+  }
+
+  .active {
+    color: $nav-menu-color-active;
+
+    @include large {
+      background-color: $nav-menu-active-background;
+      padding: $size-2 $size-4;
+      color: $nav-icon-color;
+      border-radius: $radius-sm;
+    }
+
+    &:hover {
+      color: $nav-menu-color-active;
+
+      @include large {
+        color: $nav-icon-color;
+      }
+    }
+  }
+
+  @include large {
+    .hide {
+      display: none;
+    }
+  }
+}
+
+.cta {
+  display: none;
+
+  @include large {
+    display: inline-flex;
+  }
+}

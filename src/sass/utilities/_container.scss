@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+$landscape: $site-landscape-view;
+$medium: $site-medium-view;
+$large: $site-large-view;
+$extra-large: $site-extra-large-view;
+$huge: $site-huge-view;
+
+.container {
+  padding-inline: $size-4;
+
+  @include landscape {
+    width: $landscape;
+    margin-inline: auto;
+  }
+
+  @include medium {
+    width: $medium;
+  }
+
+  @include large {
+    width: $large;
+  }
+
+  @include extra-large {
+    width: $extra-large;
+  }
+
+  @include huge {
+    width: $huge;
+  }
+}
+
+.container-width {
+  &[datatype='narrow'] {
+    max-width: $container-max-width-narrow;
+    margin-inline: auto;
+    padding-inline: $size-4;
+
+    @include large {
+      padding-inline: 0;
+    }
+  }
+}

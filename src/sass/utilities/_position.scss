@@ -1,0 +1,12 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.translate-center {
+  left: 50%;
+  transform: translateX(-50%);
+}

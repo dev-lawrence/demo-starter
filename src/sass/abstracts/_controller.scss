@@ -1,0 +1,74 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'sizes' as *;
+
+// color scheme trigger
+$color-scheme: dark;
+$enable-media-query-dark-mode: false;
+
+// body
+$body-font-family: $primary-font;
+$body-background-color: $color-neutral-900;
+$body-text-color: $color-neutral-100;
+$body-line-height: 1.6;
+$body-font-size: $font-size-100;
+
+// layout
+$container-max-width-narrow: 39rem;
+// site header
+$site-header-background: $color-neutral-900;
+$site-header-padding: $size-6 0;
+$site-logo-color: $color-neutral-100;
+
+// navigation menu
+$nav-icon-color: $color-neutral-100;
+$nav-icon-font-size: $font-size-700;
+$nav-menu-font-size: $font-size-100;
+$nav-menu-font-size-large-screen: $font-size-100;
+$nav-menu-background: $color-neutral-900;
+$nav-menu-color: $color-neutral-100;
+$nav-menu-color-hover: $color-brand-primary-400;
+$nav-menu-active-background: $color-brand-primary-400;
+$nav-menu-color-active: $nav-menu-color-hover;
+$nav-menu-width: 60%;
+$nav-menu-width-small-screen: 70%;
+$nav-menu-padding: $size-13 0 0 $size-8;
+$nav-menu-margin-bottom: $size-5;
+$nav-menu-gap: $size-7;
+$nav-menu-text-transform: capitalize;
+$nav-menu-font-weight: $fw-500;
+
+// Buttons
+$button-color: $color-neutral-100;
+$button-default-background: transparent;
+$button-text-transform: $nav-menu-text-transform;
+$button-font-weight: $fw-500;
+$button-border: none;
+$button-border-radius: $radius-sm;
+$button-padding: $size-3 $size-6;
+$button-gap: $size-5;
+
+// primary button
+$button-primary-background: $color-brand-primary-400;
+$button-primary-color: $button-color;
+$button-primary-background-hover: $color-brand-primary-200;
+$button-primary-color-hover: $button-primary-color;
+
+// accent button
+$button-accent-background: $color-neutral-200;
+$button-accent-color: $button-color;
+$button-accent-background-hover: $button-primary-background;
+$button-accent-color-hover: $button-primary-color;
+
+// site footer
+$site-footer-background: $color-grey-900;
+$site-footer-color: $color-neutral-100;
+$site-footer-primary-color: $color-brand-primary-400;
+$site-footer-pageUp-bg: $color-brand-primary-400;
+
+// breakpoints
+$site-landscape-view: 36rem; // 576px
+$site-medium-view: 48rem; // 760px
+$site-large-view: 62.25rem; // 960px
+$site-extra-large-view: 68.75rem; // 1100px
+$site-huge-view: 90rem; // 1440px

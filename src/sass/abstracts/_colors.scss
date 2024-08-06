@@ -1,0 +1,202 @@
+@use 'controller' as *;
+
+// Base Colors
+// neutral
+$clr-white: hsl(0, 0%, 100%);
+$clr-grey-lighter: hsl(0, 0%, 86%);
+$clr-grey-light: hsl(0, 0%, 75%);
+$clr-grey-mid: hsl(0, 0%, 60%);
+$clr-grey: hsl(0, 0%, 50%);
+$clr-grey-dark: hsl(0, 0%, 40%);
+$clr-grey-darker: hsl(0, 0%, 20%);
+$clr-grey-darkest: hsl(0, 0%, 0%);
+$clr-black: hsl(240 10% 3.9%);
+
+// primary color
+$clr-blue-very-light: hsl(221.2, 83.2%, 53.3%);
+$clr-blue-light: hsl(221.2, 83.2%, 48%);
+$clr-blue-lighter: hsl(221.2, 83.2%, 42.7%);
+$clr-blue-mid-light: hsl(222, 64%, 47%);
+$clr-blue-mid: hsl(221.2, 83.2%, 32%);
+$clr-blue-mid-dark: hsl(221.2, 83.2%, 26.7%);
+$clr-blue-dark: hsl(221.2, 83.2%, 21.3%);
+$clr-blue-darker: hsl(221.2, 83.2%, 16%);
+$clr-blue-very-dark: hsl(221.2, 83.2%, 10.7%);
+
+// grey
+$clr-grey-very-light: hsl(0, 0%, 95%);
+$clr-grey-light: hsl(0, 0%, 90%);
+$clr-grey-lighter: hsl(0, 0%, 80%);
+$clr-grey-mid-light: hsl(0, 0%, 70%);
+$clr-grey-mid: hsl(0, 0%, 60%);
+$clr-grey-mid-dark: hsl(0, 0%, 50%);
+$clr-grey-dark: hsl(0, 0%, 40%);
+$clr-grey-darker: hsl(0, 0%, 30%);
+$clr-grey-very-dark: hsl(0, 0%, 20%);
+
+// green
+$clr-green-very-light: hsl(120, 60%, 76%);
+$clr-green-light: hsl(120, 60%, 66%);
+$clr-green-lighter: hsl(120, 60%, 56%);
+$clr-green-mid-light: hsl(120, 60%, 46%);
+$clr-green-mid: hsl(120, 60%, 36%);
+$clr-green-mid-dark: hsl(120, 60%, 26%);
+$clr-green-dark: hsl(120, 60%, 16%);
+$clr-green-darker: hsl(120, 60%, 10%);
+$clr-green-very-dark: hsl(120, 60%, 6%);
+
+// red
+$clr-red-very-light: hsl(0, 80%, 80%);
+$clr-red-light: hsl(0, 80%, 70%);
+$clr-red-lighter: hsl(0, 80%, 60%);
+$clr-red-mid-light: hsl(0, 80%, 50%);
+$clr-red-mid: hsl(0, 80%, 40%);
+$clr-red-mid-dark: hsl(0, 80%, 30%);
+$clr-red-dark: hsl(0, 80%, 20%);
+$clr-red-darker: hsl(0, 80%, 15%);
+$clr-red-very-dark: hsl(0, 80%, 10%);
+
+// light theme color shades
+$light-theme: (
+  'neutral': (
+    '100': $clr-white,
+    '200': $clr-grey-lighter,
+    '300': $clr-grey-light,
+    '400': $clr-grey-mid,
+    '500': $clr-grey,
+    '600': $clr-grey-dark,
+    '700': $clr-grey-darker,
+    '800': $clr-grey-darkest,
+    '900': $clr-black,
+  ),
+
+  'brand-primary': (
+    '100': $clr-blue-very-light,
+    '200': $clr-blue-light,
+    '300': $clr-blue-lighter,
+    '400': $clr-blue-mid-light,
+    '500': $clr-blue-mid,
+    '600': $clr-blue-mid-dark,
+    '700': $clr-blue-dark,
+    '800': $clr-blue-darker,
+    '900': $clr-blue-very-dark,
+  ),
+  'grey': (
+    '100': $clr-grey-very-light,
+    '200': $clr-grey-light,
+    '300': $clr-grey-lighter,
+    '400': $clr-grey-mid-light,
+    '500': $clr-grey-mid,
+    '600': $clr-grey-mid-dark,
+    '700': $clr-grey-dark,
+    '800': $clr-grey-darker,
+    '900': $clr-grey-very-dark,
+  ),
+
+  'green': (
+    '100': $clr-green-very-light,
+    '200': $clr-green-light,
+    '300': $clr-green-lighter,
+    '400': $clr-green-mid-light,
+    '500': $clr-green-mid,
+    '600': $clr-green-mid-dark,
+    '700': $clr-green-dark,
+    '800': $clr-green-darker,
+    '900': $clr-green-very-dark,
+  ),
+  'red': (
+    '100': $clr-red-very-light,
+    '200': $clr-red-light,
+    '300': $clr-red-lighter,
+    '400': $clr-red-mid-light,
+    '500': $clr-red-mid,
+    '600': $clr-red-mid-dark,
+    '700': $clr-red-dark,
+    '800': $clr-red-darker,
+    '900': $clr-red-very-dark,
+  ),
+);
+
+//  dark theme color shades
+$dark-theme: (
+  'neutral': (
+    '100': $clr-black,
+    '200': $clr-grey-darkest,
+    '300': $clr-grey-darker,
+    '400': $clr-grey-dark,
+    '500': $clr-grey,
+    '600': $clr-grey-mid,
+    '700': $clr-grey-light,
+    '800': $clr-grey-lighter,
+    '900': $clr-white,
+  ),
+
+  'brand-primary': (
+    '100': $clr-blue-very-light,
+    '200': $clr-blue-light,
+    '300': $clr-blue-lighter,
+    '400': $clr-blue-mid-light,
+    '500': $clr-blue-mid,
+    '600': $clr-blue-mid-dark,
+    '700': $clr-blue-dark,
+    '800': $clr-blue-darker,
+    '900': $clr-blue-very-dark,
+  ),
+
+  'green': (
+    '100': $clr-green-very-light,
+    '200': $clr-green-light,
+    '300': $clr-green-lighter,
+    '400': $clr-green-mid-light,
+    '500': $clr-green-mid,
+    '600': $clr-green-mid-dark,
+    '700': $clr-green-dark,
+    '800': $clr-green-darker,
+    '900': $clr-green-very-dark,
+  ),
+);
+
+// Function to generate styles for a theme
+@function generate-theme-styles($theme) {
+  $styles: ();
+  @each $group, $colors in $theme {
+    @each $key, $color in $colors {
+      $styles: map-merge($styles, (#{$group}-#{$key}: $color));
+    }
+  }
+  @return $styles;
+}
+
+// Generate styles for light and dark themes
+$light-styles: generate-theme-styles($light-theme);
+$dark-styles: generate-theme-styles($dark-theme);
+
+// Apply theme based on the color scheme
+:root {
+  @each $key, $value in if($color-scheme == light, $dark-styles, $light-styles)
+  {
+    --#{$key}: #{$value};
+  }
+}
+
+// Apply dark theme when prefers-color-scheme is dark
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $key, $value in if($enable-media-query-dark-mode, $dark-styles, ()) {
+      --#{$key}: #{$value};
+    }
+  }
+}
+
+.dark {
+  @each $key, $color in $light-styles {
+    --#{$key}: #{$color};
+  }
+}
+
+// Define a class for the light mode
+.light {
+  @each $key, $color in $dark-styles {
+    --#{$key}: #{$color};
+  }
+}

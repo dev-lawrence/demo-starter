@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  background-color: $site-header-background;
+  padding: $site-header-padding;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__inner {
+    @include flex(center, space-between);
+  }
+
+  &__logo {
+    z-index: 200;
+    color: $site-logo-color;
+    font-weight: $fw-600;
+    font-size: $fs-300;
+  }
+}

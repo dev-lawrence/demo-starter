@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+// Generate utility classes using custom properties
+@each $size, $value in $fontSizes {
+  .fs-#{$size} {
+    font-size: var(--fs-#{$size});
+  }
+}
