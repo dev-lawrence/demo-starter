@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 
 interface NavBarProps {
-  click: boolean;
+  cick: boolean;
   handleNavClose: () => void;
 }
 
